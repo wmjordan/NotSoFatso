@@ -1,0 +1,4 @@
+LIBRARY	in_NotSoFatso
+
+EXPORTS
+winampGetInModule2

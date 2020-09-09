@@ -1,0 +1,643 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINCONTROL DIALOGEX 0, 0, 242, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "NotSo Fatso"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",TCS_MULTILINE,0,0,242,205
+    CONTROL         "",IDC_CLIENTBOX,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,6,31,230,167
+END
+
+IDD_PLAYCONTROL_SLIDE DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_PLAYSLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,6,86,216,11
+    PUSHBUTTON      "<< Prev",IDC_PREV,6,102,70,14
+    DEFPUSHBUTTON   "Play",IDC_PLAY,79,102,70,14
+    PUSHBUTTON      "Next >>",IDC_NEXT,152,102,70,14
+    GROUPBOX        "NSF Info",IDC_STATIC,0,0,229,68
+    RTEXT           "Game Title:\nAuthor:\nCopyright:\nRipper:\nExpansion:\nType:",IDC_STATIC,8,12,42,50
+    LTEXT           "",IDC_FILEINFO,53,12,163,50
+    GROUPBOX        "Play Control",IDC_STATIC,0,73,229,73
+    RTEXT           "Selected:\nPlaying:",IDC_STATIC,18,120,32,18
+    LTEXT           "",IDC_TRACKTEXT,53,120,163,18
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 230, 167
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Visit Slick Productions",IDC_SLICKPRODUCTIONS,23,142,183,14
+    CTEXT           "NotSo Fatso v0.851\nNSFE player; Input plugin for Winamp 2.x",IDC_STATIC,43,59,143,16
+    CONTROL         IDC_CLIENTBOX,IDC_STATIC,"Static",SS_BITMAP,23,13,183,40
+    GROUPBOX        "About NotSo Fatso",IDC_STATIC,0,0,230,80
+    GROUPBOX        "Credits and stuff",IDC_STATIC,0,81,230,56
+    LTEXT           "Disch - Coding, design and all that good stuff.\nTatsuyuki Satoh, Quietust, Xodnizel - VRC7 Support\nTzar - Look at that logo... that owns.\nBrad Taylor, Blargg, Kent Hansen, Miyama, Goroh - For the\n\tgreat sound docs.",IDC_STATIC,9,92,194,43
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 230, 161
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_SAMPLERATE,54,9,54,117,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Stereo",IDC_STEREO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,114,12,36,8
+    CONTROL         "Prefer PAL mode",IDC_PREFERPAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,12,68,8
+    CONTROL         "",IDC_MASTERVOL,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,54,36,141,11
+    CONTROL         "",IDC_SPEEDTHROTTLE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,54,49,141,11
+    CONTROL         "Use Default Speed",IDC_DEFAULTSPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,61,74,8
+    CONTROL         "Highpass",IDC_HIGHPASSON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,89,45,10
+    CONTROL         "",IDC_HIGHPASSBAR,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,54,89,133,11
+    EDITTEXT        IDC_HIGHPASS,188,88,36,12,ES_AUTOHSCROLL
+    CONTROL         "Lowpass",IDC_LOWPASSON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,103,43,10
+    CONTROL         "",IDC_LOWPASSBAR,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,54,103,133,11
+    EDITTEXT        IDC_LOWPASS,188,102,36,12,ES_AUTOHSCROLL
+    CONTROL         "Prepass",IDC_PREPASSON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,116,41,10
+    CONTROL         "",IDC_PREPASSBAR,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,54,117,133,11
+    EDITTEXT        IDC_PREPASS,188,116,36,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEFAULTLENGTH,49,143,61,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEFAULTFADE,162,143,61,12,ES_AUTOHSCROLL
+    LTEXT           "Sample Rate:",IDC_STATIC,7,12,44,8
+    LTEXT           "Master Volume:",IDC_STATIC,5,36,50,8
+    GROUPBOX        "Output Options",IDC_STATIC,0,0,230,26
+    GROUPBOX        "Misc",IDC_STATIC,0,26,230,48
+    LTEXT           "Speed Throttle:",IDC_STATIC,5,49,51,8
+    GROUPBOX        "Default Times",IDC_STATIC,0,134,229,27
+    LTEXT           "Song Length:",IDC_STATIC,5,145,44,8
+    LTEXT           "Fade Length:",IDC_STATIC,117,145,44,8
+    LTEXT           "",IDC_VOLUMEDISPLAY,202,36,22,8
+    LTEXT           "",IDC_SPEEDDISPLAY,202,49,22,8
+    GROUPBOX        "Filter Options",IDC_STATIC,0,77,229,56
+END
+
+IDD_CONFIG_2 DIALOGEX 0, 0, 230, 165
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Mutli-track NSFs",IDC_OPEN_MULTI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,10,67,10
+    CONTROL         "Single-track NSFs",IDC_OPEN_SINGLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,83,10,71,10
+    CONTROL         "NSF Shadows",IDC_OPEN_SHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,164,10,59,10
+    EDITTEXT        IDC_FORMAT_MULTI,70,35,146,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FORMAT_SINGLE,70,49,146,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FORMAT_SHADOW,70,63,146,12,ES_AUTOHSCROLL
+    CONTROL         "Disable NSFE playlists",IDC_DISABLEPLAYLIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,131,85,10
+    CONTROL         "Play Indefinitely",IDC_LOOPFOREVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,131,67,9
+    CONTROL         "Subclass Winamp",IDC_SUBCLASSWINAMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,141,71,8
+    CONTROL         "Always on Top",IDC_ALWAYSONTOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,141,67,8
+    CONTROL         "Use Mini Play Control",IDC_USEMINI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,150,83,8
+    CONTROL         "Mini Always on Top",IDC_MINIALWAYSONTOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,150,92,8
+    GROUPBOX        "Auto Open Play Control",IDC_STATIC,0,0,230,24
+    GROUPBOX        "Display String Formatting",IDC_STATIC,0,25,230,94
+    LTEXT           "Multi-track NSFs:",IDC_STATIC,12,37,55,8
+    LTEXT           "Single-track NSFs:",IDC_STATIC,8,51,59,8
+    LTEXT           "NSF Shadows:",IDC_STATIC,20,65,47,8
+    LTEXT           "%g = Game Title\t\t%f = File title\n%a = Artist\t\t\t%l = Current Track Label\n%c = Copyright info\t\t%t = Current Track\n%r = NSF ripper\t\t\t%o = Track Total",IDC_STATIC,18,81,193,35
+    GROUPBOX        "Misc UI Options",IDC_STATIC,0,122,229,42
+END
+
+IDD_VRC6 DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,13,39,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,13,35,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,25,63,10
+    EDITTEXT        IDC_VOLBOX_1,85,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,39,63,10
+    EDITTEXT        IDC_PANBOX_1,85,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,39,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,13,35,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,25,63,10
+    EDITTEXT        IDC_VOLBOX_2,201,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,39,63,10
+    EDITTEXT        IDC_PANBOX_2,201,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,68,39,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,68,35,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,80,63,10
+    EDITTEXT        IDC_VOLBOX_3,85,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,94,63,10
+    EDITTEXT        IDC_PANBOX_3,85,91,23,12,ES_AUTOHSCROLL
+    LTEXT           "Vol:",IDC_STATIC,9,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,39,16,8
+    GROUPBOX        "Extra Square 1",IDC_STATIC,0,0,113,53
+    LTEXT           "Vol:",IDC_STATIC,9,80,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,94,16,8
+    GROUPBOX        "Sawtooth",IDC_STATIC,0,55,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,39,16,8
+    GROUPBOX        "Extra Square 2",IDC_STATIC,116,0,113,53
+END
+
+IDD_CHANNELS DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,13,39,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,13,35,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,25,63,10
+    EDITTEXT        IDC_VOLBOX_1,85,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,39,63,10
+    EDITTEXT        IDC_PANBOX_1,85,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,39,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,13,35,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,25,63,10
+    EDITTEXT        IDC_VOLBOX_2,201,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,39,63,10
+    EDITTEXT        IDC_PANBOX_2,201,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,68,39,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,68,35,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,80,63,10
+    EDITTEXT        IDC_VOLBOX_3,85,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,94,63,10
+    EDITTEXT        IDC_PANBOX_3,85,91,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,68,39,8
+    CONTROL         "Invert",IDC_INV_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,68,35,8
+    CONTROL         "",IDC_VOL_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,80,63,10
+    EDITTEXT        IDC_VOLBOX_4,201,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,94,63,10
+    EDITTEXT        IDC_PANBOX_4,201,91,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,123,39,8
+    CONTROL         "Invert",IDC_INV_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,123,35,8
+    CONTROL         "",IDC_VOL_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,135,63,10
+    EDITTEXT        IDC_VOLBOX_5,85,133,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,149,63,10
+    EDITTEXT        IDC_PANBOX_5,85,147,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,123,39,8
+    CONTROL         "Invert",IDC_INV_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,123,35,8
+    CONTROL         "",IDC_VOL_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,135,63,10
+    EDITTEXT        IDC_VOLBOX_6,201,133,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,149,63,10
+    EDITTEXT        IDC_PANBOX_6,201,147,23,12,ES_AUTOHSCROLL
+    LTEXT           "Vol:",IDC_STATIC,9,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,39,16,8
+    GROUPBOX        "Square 1",IDC_STATIC,0,0,113,53
+    LTEXT           "Vol:",IDC_STATIC,9,80,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,94,16,8
+    GROUPBOX        "Triangle",IDC_STATIC,0,55,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,39,16,8
+    GROUPBOX        "Square 2",IDC_STATIC,116,0,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,80,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,94,16,8
+    GROUPBOX        "Noise",IDC_STATIC,116,55,113,53
+    LTEXT           "Vol:",IDC_STATIC,9,135,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,149,16,8
+    GROUPBOX        "DMC",IDC_STATIC,0,110,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,135,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,149,16,8
+    GROUPBOX        "FDS (Expansion only)",IDC_STATIC,116,110,113,53
+END
+
+IDD_GENERALFILEINFO DIALOGEX 0, 0, 263, 193
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "",IDC_CONVERT,5,171,83,14
+    PUSHBUTTON      "Shadow -> Winamp",IDC_WINAMPSHADOW,90,171,83,14
+    PUSHBUTTON      "Shadow -> File",IDC_FILESHADOW,175,171,83,14
+    EDITTEXT        IDC_FILENAME,10,10,247,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "File",IDC_STATIC,0,0,263,36
+    GROUPBOX        "NSF Info",IDC_STATIC,0,38,263,118
+    RTEXT           "Game Title:\nArtist:\nCopyright:\nNSF Ripper:\nNumber of Tracks:\nExternal Sound:\nType:\n\nIs Extended:\nTrack Labels:\nTrack Times:\nTrack Fade:\nInternal Playlist:",IDC_STATIC,11,47,64,105
+    CONTROL         "",IDC_FILEINFO,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,80,47,176,105
+    GROUPBOX        "Options",IDC_STATIC,0,157,263,36
+    LTEXT           "",IDC_SHADOWTEXT,10,24,247,8
+END
+
+IDD_TRACKINFO DIALOGEX 0, 0, 263, 193
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_TRACKLIST,7,13,123,172,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Has Labels",IDC_HASLABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,134,14,50,8
+    CONTROL         "Has Length",IDC_HASLENGTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,134,24,51,8
+    CONTROL         "Has Fade",IDC_HASFADE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,134,34,46,8
+    EDITTEXT        IDC_LABEL,134,69,123,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LENGTH,134,107,70,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Now",IDC_GETLENGTH,207,107,50,12
+    EDITTEXT        IDC_FADE,134,144,70,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Now",IDC_GETFADE,207,144,50,12
+    GROUPBOX        "Track Info",IDC_STATIC,0,0,263,193
+    LTEXT           "Track Label:",IDC_STATIC,134,59,40,8
+    LTEXT           "Track Length:",IDC_STATIC,134,97,45,8
+    LTEXT           "Track Fade:",IDC_STATIC,134,135,39,8
+END
+
+IDD_PLAYLISTINFO DIALOGEX 0, 0, 263, 193
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_TRACKLIST,7,12,106,174,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "All >>",IDC_ADDALL,117,52,30,14
+    PUSHBUTTON      ">>",IDC_ADD,117,79,30,14
+    PUSHBUTTON      "<<",IDC_REMOVE,117,106,30,14
+    PUSHBUTTON      "<< All",IDC_REMOVEALL,117,133,30,14
+    PUSHBUTTON      "Move Up",IDC_MOVEUP,151,12,106,11
+    LISTBOX         IDC_PLAYLIST,151,25,106,147,LBS_SORT | LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Move Down",IDC_MOVEDOWN,151,175,106,11
+    GROUPBOX        "Playlist Info",-1,0,0,263,193
+END
+
+IDD_FILEINFO DIALOGEX 0, 0, 277, 255
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File info"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",TCS_FIXEDWIDTH,0,0,277,232
+    PUSHBUTTON      "Save Changes",IDC_SAVE,6,236,86,14
+    PUSHBUTTON      "Save / Close",IDC_SAVECLOSE,95,236,86,14
+    PUSHBUTTON      "Close (no Save)",IDCANCEL,184,236,86,14
+    CONTROL         "",IDC_CLIENTRECT,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,6,18,263,204
+END
+
+IDD_MMC5 DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,13,39,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,13,35,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,25,63,10
+    EDITTEXT        IDC_VOLBOX_1,85,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,39,63,10
+    EDITTEXT        IDC_PANBOX_1,85,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,39,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,13,35,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,25,63,10
+    EDITTEXT        IDC_VOLBOX_2,201,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,39,63,10
+    EDITTEXT        IDC_PANBOX_2,201,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,68,39,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,73,68,35,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,80,63,10
+    EDITTEXT        IDC_VOLBOX_3,85,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,94,63,10
+    EDITTEXT        IDC_PANBOX_3,85,91,23,12,ES_AUTOHSCROLL
+    LTEXT           "Vol:",-1,9,25,13,8
+    LTEXT           "Pan:",-1,6,39,16,8
+    GROUPBOX        "Extra Square 1",-1,0,0,113,53
+    LTEXT           "Vol:",-1,125,25,13,8
+    LTEXT           "Pan:",-1,122,39,16,8
+    GROUPBOX        "Extra Square 2",-1,116,0,113,53
+    LTEXT           "Vol:",-1,9,80,13,8
+    LTEXT           "Pan:",-1,6,94,16,8
+    GROUPBOX        "Voice",-1,0,55,113,53
+END
+
+IDD_MINIPLAY DIALOGEX 0, 0, 182, 28
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "NotSo Fatso Mini-Play Control"
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      ">",IDC_PLAY,3,3,18,11
+    CONTROL         "",IDC_PLAYSLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,25,3,113,9
+    PUSHBUTTON      "<<",IDC_PREV,142,3,18,11
+    PUSHBUTTON      ">>",IDC_NEXT,161,3,18,11
+    PUSHBUTTON      "Config",IDC_CONFIG,142,15,37,10
+    LTEXT           "Static",IDC_TRACKLABEL,18,17,117,8
+END
+
+IDD_N106 DIALOGEX 0, 0, 229, 166
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,11,38,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,11,32,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,20,63,9
+    EDITTEXT        IDC_VOLBOX_1,85,13,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,29,63,9
+    EDITTEXT        IDC_PANBOX_1,85,26,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,11,38,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,11,32,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,20,63,9
+    EDITTEXT        IDC_VOLBOX_2,201,13,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,29,63,9
+    EDITTEXT        IDC_PANBOX_2,201,26,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,53,38,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,53,32,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,62,63,9
+    EDITTEXT        IDC_VOLBOX_3,85,55,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,71,63,9
+    EDITTEXT        IDC_PANBOX_3,85,68,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,53,38,8
+    CONTROL         "Invert",IDC_INV_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,53,32,8
+    CONTROL         "",IDC_VOL_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,62,63,9
+    EDITTEXT        IDC_VOLBOX_4,201,55,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,71,63,9
+    EDITTEXT        IDC_PANBOX_4,201,68,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,95,38,8
+    CONTROL         "Invert",IDC_INV_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,95,32,8
+    CONTROL         "",IDC_VOL_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,104,63,9
+    EDITTEXT        IDC_VOLBOX_5,85,96,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,113,63,9
+    EDITTEXT        IDC_PANBOX_5,85,110,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,95,38,8
+    CONTROL         "Invert",IDC_INV_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,95,32,8
+    CONTROL         "",IDC_VOL_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,104,63,9
+    EDITTEXT        IDC_VOLBOX_6,201,96,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,113,63,9
+    EDITTEXT        IDC_PANBOX_6,201,110,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,136,38,8
+    CONTROL         "Invert",IDC_INV_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,136,32,8
+    CONTROL         "",IDC_VOL_7,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,145,63,9
+    EDITTEXT        IDC_VOLBOX_7,85,137,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_7,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,21,154,63,9
+    EDITTEXT        IDC_PANBOX_7,85,151,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,136,38,8
+    CONTROL         "Invert",IDC_INV_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,136,32,8
+    CONTROL         "",IDC_VOL_8,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,145,63,9
+    EDITTEXT        IDC_VOLBOX_8,201,137,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_8,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,137,154,63,9
+    EDITTEXT        IDC_PANBOX_8,201,151,23,12,ES_AUTOHSCROLL
+    GROUPBOX        "Channel 1",IDC_STATIC,0,1,113,40
+    LTEXT           "Vol:",IDC_STATIC,8,20,13,8
+    LTEXT           "Pan:",IDC_STATIC,5,28,16,8
+    GROUPBOX        "Channel 2",IDC_STATIC,116,1,113,40
+    LTEXT           "Vol:",IDC_STATIC,124,20,13,8
+    LTEXT           "Pan:",IDC_STATIC,121,28,16,8
+    GROUPBOX        "Channel 3",IDC_STATIC,0,43,113,40
+    LTEXT           "Vol:",IDC_STATIC,8,62,13,8
+    LTEXT           "Pan:",IDC_STATIC,5,70,16,8
+    GROUPBOX        "Channel 4",IDC_STATIC,116,43,113,40
+    LTEXT           "Vol:",IDC_STATIC,124,62,13,8
+    LTEXT           "Pan:",IDC_STATIC,121,70,16,8
+    GROUPBOX        "Channel 5",IDC_STATIC,0,85,113,40
+    LTEXT           "Vol:",IDC_STATIC,8,104,13,8
+    LTEXT           "Pan:",IDC_STATIC,5,112,16,8
+    GROUPBOX        "Channel 6",IDC_STATIC,116,85,113,40
+    LTEXT           "Vol:",IDC_STATIC,124,104,13,8
+    LTEXT           "Pan:",IDC_STATIC,121,112,16,8
+    GROUPBOX        "Channel 7",IDC_STATIC,0,126,113,40
+    LTEXT           "Vol:",IDC_STATIC,8,145,13,8
+    LTEXT           "Pan:",IDC_STATIC,5,153,16,8
+    GROUPBOX        "Channel 8",IDC_STATIC,116,126,113,40
+    LTEXT           "Vol:",IDC_STATIC,124,145,13,8
+    LTEXT           "Pan:",IDC_STATIC,121,153,16,8
+END
+
+IDD_VRC7 DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,13,39,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,13,32,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,25,63,10
+    EDITTEXT        IDC_VOLBOX_1,85,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,39,63,10
+    EDITTEXT        IDC_PANBOX_1,85,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,39,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,13,32,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,25,63,10
+    EDITTEXT        IDC_VOLBOX_2,201,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,39,63,10
+    EDITTEXT        IDC_PANBOX_2,201,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,68,39,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,68,32,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,80,63,10
+    EDITTEXT        IDC_VOLBOX_3,85,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,94,63,10
+    EDITTEXT        IDC_PANBOX_3,85,91,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,68,39,8
+    CONTROL         "Invert",IDC_INV_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,68,32,8
+    CONTROL         "",IDC_VOL_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,80,63,10
+    EDITTEXT        IDC_VOLBOX_4,201,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,94,63,10
+    EDITTEXT        IDC_PANBOX_4,201,91,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,123,39,8
+    CONTROL         "Invert",IDC_INV_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,123,32,8
+    CONTROL         "",IDC_VOL_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,135,63,10
+    EDITTEXT        IDC_VOLBOX_5,85,133,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,149,63,10
+    EDITTEXT        IDC_PANBOX_5,85,147,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,123,39,8
+    CONTROL         "Invert",IDC_INV_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,123,32,8
+    CONTROL         "",IDC_VOL_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,135,63,10
+    EDITTEXT        IDC_VOLBOX_6,201,133,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,149,63,10
+    EDITTEXT        IDC_PANBOX_6,201,147,23,12,ES_AUTOHSCROLL
+    LTEXT           "Vol:",IDC_STATIC,9,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,39,16,8
+    GROUPBOX        "Channel 1",IDC_STATIC,0,0,113,53
+    LTEXT           "Vol:",IDC_STATIC,9,80,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,94,16,8
+    GROUPBOX        "Channel 3",IDC_STATIC,0,55,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,25,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,39,16,8
+    GROUPBOX        "Channel 2",IDC_STATIC,116,0,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,80,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,94,16,8
+    GROUPBOX        "Channel 4",IDC_STATIC,116,55,113,53
+    LTEXT           "Vol:",IDC_STATIC,9,135,13,8
+    LTEXT           "Pan:",IDC_STATIC,6,149,16,8
+    GROUPBOX        "Channel 5",IDC_STATIC,0,110,113,53
+    LTEXT           "Vol:",IDC_STATIC,125,135,13,8
+    LTEXT           "Pan:",IDC_STATIC,122,149,16,8
+    GROUPBOX        "Channel 6",IDC_STATIC,116,110,113,53
+END
+
+IDD_FME07 DIALOGEX 0, 0, 229, 178
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "Enabled",IDC_MIX_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,13,39,8
+    CONTROL         "Invert",IDC_INV_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,13,32,8
+    CONTROL         "",IDC_VOL_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,25,63,10
+    EDITTEXT        IDC_VOLBOX_1,85,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,39,63,10
+    EDITTEXT        IDC_PANBOX_1,85,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,13,39,8
+    CONTROL         "Invert",IDC_INV_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,13,32,8
+    CONTROL         "",IDC_VOL_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,25,63,10
+    EDITTEXT        IDC_VOLBOX_2,201,23,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,138,39,63,10
+    EDITTEXT        IDC_PANBOX_2,201,36,23,12,ES_AUTOHSCROLL
+    CONTROL         "Enabled",IDC_MIX_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,68,39,8
+    CONTROL         "Invert",IDC_INV_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,68,32,8
+    CONTROL         "",IDC_VOL_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,80,63,10
+    EDITTEXT        IDC_VOLBOX_3,85,78,23,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAN_3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,94,63,10
+    EDITTEXT        IDC_PANBOX_3,85,91,23,12,ES_AUTOHSCROLL
+    LTEXT           "Vol:",-1,9,25,13,8
+    LTEXT           "Pan:",-1,6,39,16,8
+    GROUPBOX        "Pulse A",-1,0,0,113,53
+    LTEXT           "Vol:",-1,125,25,13,8
+    LTEXT           "Pan:",-1,122,39,16,8
+    GROUPBOX        "Pulse B",-1,116,0,113,53
+    LTEXT           "Vol:",-1,9,80,13,8
+    LTEXT           "Pan:",-1,6,94,16,8
+    GROUPBOX        "Pulse C",-1,0,55,113,53
+END
+
+IDD_CONFIG_3 DIALOGEX 0, 0, 229, 164
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    CONTROL         "DMC Pop Reducer",IDC_DMCPOPREDUCER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,12,74,8
+    CONTROL         "Ignore $4011 Writes",IDC_IGNORE4011,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,12,80,8
+    CONTROL         "N106 Pop Reducer",IDC_N106POPREDUCER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,21,74,8
+    CONTROL         "Reset Duty on $4003/7",IDC_RESETDUTY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,21,88,8
+    CONTROL         "FDS Pop Reducer",IDC_FDSPOPREDUCER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,30,74,8
+    CONTROL         "Ignore BRK",IDC_IGNOREBRK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,59,80,8
+    CONTROL         "Ignore NSF Version Number",IDC_IGNOREVERSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,59,102,8
+    CONTROL         "Ignore Illegal Opcodes",IDC_IGNOREILLEGAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,68,87,8
+    CONTROL         "Don't wait for Play Return",IDC_NOWAIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,77,98,8
+    CONTROL         "Reset 6502 Regs",IDC_CLEANAXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,86,69,8
+    COMBOBOX        IDC_FORCE4017,112,81,63,120,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Prevent Inverting under",IDC_INVERTCUTOFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,115,90,8
+    EDITTEXT        IDC_INVERTCUTOFFHZ,105,112,33,12,ES_AUTOHSCROLL
+    CONTROL         "Stop after",IDC_SILENCETRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,129,45,8
+    EDITTEXT        IDC_SILENCETRACKMS,61,127,33,12,ES_AUTOHSCROLL
+    CONTROL         "...Unless track length is specified",IDC_NOSILENCEIFLEN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,142,118,8
+    LTEXT           "Force $4017 Write:",IDC_STATIC,112,72,63,8
+    LTEXT           "MS of silence",IDC_STATIC,97,129,42,8
+    LTEXT           "Hz",IDC_STATIC,143,115,9,8
+    GROUPBOX        "Detection Options",IDC_STATIC,0,103,229,52
+    GROUPBOX        "Strictness Settings",IDC_STATIC,0,47,229,55
+    GROUPBOX        "Misc",IDC_STATIC,0,0,229,44
+END
+
+IDD_TAGINFO DIALOGEX 0, 0, 263, 193
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_TITLE,69,18,156,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARTIST,69,33,156,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COPYRIGHT,69,48,156,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIPPER,69,63,156,12,ES_AUTOHSCROLL
+    LTEXT           "Title:",IDC_STATIC,49,19,17,8
+    LTEXT           "Artist:",IDC_STATIC,45,34,21,8
+    LTEXT           "Copyright:",IDC_STATIC,31,50,35,8
+    LTEXT           "Ripper:",IDC_STATIC,42,64,24,8
+    GROUPBOX        "Text Fields",IDC_STATIC,0,0,263,84
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP                  "NotSoLogo.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+    END
+
+    IDD_GENERALFILEINFO, DIALOG
+    BEGIN
+    END
+
+    IDD_FILEINFO, DIALOG
+    BEGIN
+        RIGHTMARGIN, 263
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_MINIPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 179
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 25
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WBWINAMP            ICON                    "wannabewinamp.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_GENERALFILEINFO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
